@@ -1,0 +1,10 @@
+numpy==1.26.4
+opencv-python==4.10.0.84
+mediapipe==0.10.14
+tensorflow-cpu==2.16.2
+matplotlib==3.10.8
+sounddevice==0.5.3
+opencv-contrib-python==4.12.0.88
+
+#python -m pip install --upgrade pip
+#pip install -r requirements.txt
