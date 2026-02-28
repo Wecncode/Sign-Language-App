@@ -132,6 +132,36 @@ python -m src.collect_data
 | `0-9`   | Jump to sign by number     |
 | `Q`     | Quit                       |
 
+## Updating the Project
+
+When new updates are pushed to the repository, you can download them while keeping your local changes.
+
+**If you have no uncommitted changes:**
+```bash
+git pull --rebase
+```
+
+**If you have uncommitted work in progress:**
+```bash
+git stash
+git pull --rebase
+git stash pop
+```
+
+This saves your local changes temporarily, pulls the latest updates, then reapplies your changes on top.
+
+**If you have already committed your changes locally:**
+```bash
+git pull --rebase
+```
+
+This places the new updates from the repository underneath your local commits, so your work stays on top. If there are conflicts (i.e., you and the repo changed the same lines), Git will ask you to resolve them. Open the conflicting files, fix the marked sections, then:
+
+```bash
+git add .
+git rebase --continue
+```
+
 ## Project Structure
 
 ```
